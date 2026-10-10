@@ -27,7 +27,7 @@ Kubernetes (Minikube)
 ## Contents
 
 ```
-ai-pytest-generator-gitops/
+ai-test-generator-gitops/
 └── charts/
     └── ai-test-generator/
         ├── Chart.yaml          # Helm chart metadata
@@ -70,8 +70,8 @@ ai-pytest-generator-gitops/
 To render or install the chart manually (e.g. for debugging without ArgoCD):
 
 ```bash
-git clone https://github.com/SannidhiSriram-06/ai-pytest-generator-gitops.git
-cd ai-pytest-generator-gitops
+git clone https://github.com/SannidhiSriram-06/ai-test-generator-gitops.git
+cd ai-test-generator-gitops
 
 helm template ai-test-generator charts/ai-test-generator
 # or, against a running cluster:
