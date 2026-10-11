@@ -1,4 +1,4 @@
-# ai-test-generator-gitops
+# ai-pytest-generator-gitops
 
 > Helm-chart repository for [ai-test-generator](https://github.com/SannidhiSriram-06/ai-test-generator). It contains deployment configuration only; no application source code, Dockerfile, or CI pipeline is included. An Argo CD Application configured outside this repository can use this chart as its desired deployment state.
 
@@ -12,7 +12,7 @@ Separating deployment configuration from application code supports a GitOps work
 ai-test-generator (app repo)
    │  Jenkins CI: test → build → push image to ECR
    ▼
-ai-test-generator-gitops (this repo)
+ai-pytest-generator-gitops (this repo)
    │  Jenkins CI updates charts/ai-test-generator/values.yaml (image.tag)
    ▼
 ArgoCD
@@ -27,7 +27,7 @@ Kubernetes (Minikube)
 ## Contents
 
 ```
-ai-test-generator-gitops/
+ai-pytest-generator-gitops/
 └── charts/
     └── ai-test-generator/
         ├── Chart.yaml          # Helm chart metadata
@@ -70,8 +70,8 @@ ai-test-generator-gitops/
 To render or install the chart manually (e.g. for debugging without ArgoCD):
 
 ```bash
-git clone https://github.com/SannidhiSriram-06/ai-test-generator-gitops.git
-cd ai-test-generator-gitops
+git clone https://github.com/SannidhiSriram-06/ai-pytest-generator-gitops.git
+cd ai-pytest-generator-gitops
 
 helm template ai-test-generator charts/ai-test-generator
 # or, against a running cluster:
